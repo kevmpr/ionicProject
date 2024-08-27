@@ -12,8 +12,8 @@ export class Tab3Page {
 
   async logout(){
     let alert = await this.alertController.create({
-      header: 'Ohhh, you are going...',
-      message: 'Thank you for using our app, we hope you to back soon'
+      header: 'Ohhh, you are leaving...',
+      message: 'Thank you for using our app, we hope you to come back soon'
     })
 
     await alert.present();
