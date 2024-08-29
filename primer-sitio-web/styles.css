@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --font: "Roboto", sans-serif;
+
+    --fontColorBlue: #7695FF;
+    --fontColorLightBlue: #9DBDFF;
+    --fontColorBlack: #14080e;
+    --fontColorGrey: #f3f1f1;
+    --fontColorWhite: #fff;
+    --fontColorRed: #D81E5B;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--fontColorWhite);
+    color:var(--fontColorBlack);
+}
+
+.header{
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--fontColorBlue);
+    color: var(--fontColorWhite);
+    font-weight: 900;
+}
+
+.nav{
+    padding: 1rem;
+    background-color: var(--fontColorBlue);
+    color: var(--fontColorWhite);
+    font-weight: 700;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__list__link{
+    list-style: none;
+}
+
+.nav__list__link:hover{
+    cursor: pointer;
+    color: var(--fontColorGrey);
+}
+
+.container{
+    display: flex;
+}
+
+.section{
+    width: 70%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.article{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.article__content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--articleContentColor);
+}
+
+.article__content__titles{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--fontColorLightBlue);
+    text-align: center;
+}
+
+.img{
+    width: 30%;
+    border-radius: 10px;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer{
+    padding: 2rem;
+    text-align: center;
+    background-color:var(--fontColorRed);
+    color: var(--fontColorWhite);
+    font-weight: 700;
+}
