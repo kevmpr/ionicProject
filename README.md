@@ -10,4 +10,5 @@
   <li>N°1 = Ionic</li>
   <li>N°2 = HTML y CSS</li>
   <li>N°3 = APIs</li>
+  <li>N°4 = TypeScript</li>
 </ul>
