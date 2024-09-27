@@ -12,6 +12,7 @@ import { Actividad } from '../models/actividades.model';
 export class AgregarPage implements OnInit {
   lista: Lista;
   nombreItem: string;
+  actividad: Actividad;
 
   constructor(
     private router: ActivatedRoute,
@@ -20,6 +21,7 @@ export class AgregarPage implements OnInit {
     let idLista = this.router.snapshot.paramMap.get('idLista');
     this.lista = new Lista('');
     this.nombreItem = '';
+    this.actividad = new Actividad('');
     if (idLista) {
       let ObjetoLista = this.listaService.obtenerLista(idLista);
       

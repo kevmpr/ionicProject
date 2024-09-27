@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Lista } from 'src/app/models/lista.model';
 import { ListaService } from 'src/app/services/lista.service';
@@ -8,12 +8,10 @@ import { ListaService } from 'src/app/services/lista.service';
   templateUrl: './listas.component.html',
   styleUrls: ['./listas.component.scss'],
 })
-export class ListasComponent  implements OnInit {
+export class ListasComponent implements OnInit {
+  @Input() tipo: string = '';
 
-  constructor(
-    public listaService: ListaService,
-    private roter: Router
-  ) { }
+  constructor(public listaService: ListaService, private roter: Router) {}
 
   ngOnInit() {}
 
@@ -42,8 +40,7 @@ export class ListasComponent  implements OnInit {
           handler: (data: any) => {
             let esValido: boolean = this.listaService.validarInput(data);
             if (esValido) {
-              (lista.titulo = data.titulo),
-                this.editarLista(lista);
+              (lista.titulo = data.titulo), this.editarLista(lista);
               this.listaService.presentToast('Lista editada correctamente!');
             }
           },
@@ -58,8 +55,8 @@ export class ListasComponent  implements OnInit {
     console.log('Eliminar lista:', listaItem);
   }
 
-  listaSeleccionada(listaItem: Lista){
-    const URL = '/agregar/' + listaItem.id; 
+  listaSeleccionada(listaItem: Lista) {
+    const URL = '/agregar/' + listaItem.id;
     this.roter.navigateByUrl(URL);
   }
 }
